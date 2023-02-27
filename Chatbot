@@ -1,0 +1,203 @@
+# Chatbot_Ordering_Pizza (rule-based)
+
+# Chatbot_ R_Greetings
+print ("Alohaa Guys!, Welcome to Papi Pizza App.")
+
+# Get input from user
+print("May I know your name please?")
+user_name <- readLines("stdin", n = 1)
+print(paste("Hii", user_name, "Happy to meet you here!"))
+
+# Does user have a membership?
+print("Do you have a membership?")
+print(paste("If you have enter, 'Of Course!'; otherwise, enter 'SKIP'."))
+member <- readLines("stdin", n=1)
+
+# In case enter the incorrect word
+if((member != "Of Course!") && (member!= "SKIP")) {
+    print("---INVAILD COMMAND---")
+    print("Please enter, 'Of Course! or 'SKIP'.")
+    member <- readLines("stdin", n=1)
+}
+
+# Yes, user is a membership
+if (member == "Of Course!") {
+    print("Please enter your 4 digit member ID")
+    member_id <- as.numeric(readLines("stdin", n=1))  
+    print("What would you like to order today?")
+    menu < - c("[1] Pizza [2] Chicken [3] Pasta [4] Salad")
+    print("menu")
+    menu <- as.numeric(readLines("stdin", n=1))
+# Menu
+  if (menu == 1) {
+  print("Choose your fav Papi pizza here!")
+  print("[1] Pepperoni [2] Hawaiian [3] Chicken BBQ [4] Vegetarian [5] Seafood Deluxe")
+    pizza <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 2) {
+  print("Which chicken menu you would like to taste?")
+  print("[1] BBQ Chicken Wings [2] Korean Style Chicken Wings [3] Garlic Chicken Wings")
+  chicken <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 3) {
+  print("Here are Papi yummy pasta menu!")
+  print("[1] Carbonara [2] Spicy Sauage [3] Kheemao Seafood")
+  pasta <- as.numeric(readLines("stdin", n=1))
+  } else
+if (menu == 4) {
+  print("Only organic vegetables are cooked by Papi for your well-being.")
+  print("[1] Graden Salad [2] Caesar Salad [3] Shrimp Salad")
+  salad <- as.numeric(readLines("stdin", n=1))
+} 
+# Anything else
+print("Is there anything else you would like to order?")
+print("[1] Yes [2] No")
+add_order <- as.numeric(readLines("stdin", n=1))
+
+# Yes
+if (add_order == 1) {
+  print("What would you like to order?")
+  print("[1] Pizza [2] Chicken [3] Pasta [4] Salad")
+  menu <- as.numeric(readLines("stdin", n=1))
+if (menu == 1) {
+  print("Choose your fav Papi pizza here!")
+  print("[1] Pepperoni [2] Hawaiian [3] Chicken BBQ [4] Vegetarian [5] Seafood Deluxe")
+    pizza <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 2) {
+  print("Which chicken menu you would like to taste?")
+  print("[1] BBQ Chicken Wings [2] Korean Style Chicken Wings [3] Garlic Chicken Wings")
+  chicken <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 3) {
+  print("Here are Papi yummy pasta menu!")
+  print("[1] Carbonara [2] Spicy Sauage [3] Kheemao Seafood")
+  pasta <- as.numeric(readLines("stdin", n=1))
+  } else
+if (menu == 4) {
+  print("Only organic vegetables are cooked by Papi for your well-being.")
+  print("[1] Graden Salad [2] Caesar Salad [3] Shrimp Salad")
+  salad <- as.numeric(readLines("stdin", n=1))
+  }  
+  print("Is there anything else you would like to order?")
+  print("[1] Yes [2] No")
+  add_order <- as.numeric(readLines("stdin", n=1))
+}
+
+if (add_order == 2) {
+print("Would you like to apply discount?")
+print("[1] Yes [2] No")
+discount <- as.numeric(readLines("stdin", n=1))
+
+print("Please select your payment menthod")
+print("[1]Cash [2] Credit/ Debit Card [3] Mobile Banking ")
+payment <-as.numeric(readLines("stdin", n=1))
+}
+
+if(payment == 1) {
+  print("Exact change only") 
+  print("Thank you so much.")
+  print("Your order has been processed. Please wait for 30 minutes.")
+  print("Hope you enjoy your meal!")
+} else {
+  print("Payment Successfully!") 
+  print("Thank you so much.")
+  print("Your order has been processed. Please wait for 30 minutes.")
+  print("Hope you enjoy your meal!")
+}  
+} else
+  
+# Whether the user would like to apply if they do not already have a membership
+  
+{
+print("Would you like to apply a membership to get an information and coupon for the next order?")
+print("Enter 'WHY NOT!'if you would, if not, enter 'Fine' to order now.")
+apply_member <- readLines("stdin", n=1)
+
+# Applying member
+if (apply_member == "WHY NOT!") {
+  print("Your application has been submitted successfully. Thank you to become Papi member.")
+  print("Anyway, What would you like to have today?")
+  print("[1] Pizza [2] Chicken [3] Pasta [4] Salad")
+  menu <- as.numeric(readLines("stdin", n=1))
+} else
+{
+  print("What would you like to order?")
+  print("[1] Pizza [2] Chicken [3] Pasta [4] Salad")
+  menu <- as.numeric(readLines("stdin", n=1))
+}
+
+if (menu == 1) {
+  print("Choose your fav Papi pizza here!")
+  print("[1] Pepperoni [2] Hawaiian [3] Chicken BBQ [4] Vegetarian [5] Seafood Deluxe")
+    pizza <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 2) {
+  print("Which chicken menu you would like to taste?")
+  print("[1] BBQ Chicken Wings [2] Korean Style Chicken Wings [3] Garlic Chicken Wings")
+  chicken <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 3) {
+  print("Here are Papi yummy pasta menu!")
+  print("[1] Carbonara [2] Spicy Sauage [3] Kheemao Seafood")
+  pasta <- as.numeric(readLines("stdin", n=1))
+  } else
+if (menu == 4) {
+  print("Only organic vegetables are cooked by Papi for your well-being.")
+  print("[1] Graden Salad [2] Caesar Salad [3] Shrimp Salad")
+  salad <- as.numeric(readLines("stdin", n=1))
+  }  
+  
+# Anything else
+print("Is there anything else you would like to order?")
+print("[1] Yes [2] No")
+add_order <- as.numeric(readLines("stdin", n=1))
+
+# Yes
+if (add_order == 1) {
+  print("What would you like to order?")
+  print("[1] Pizza [2] Chicken [3] Pasta [4] Salad")
+  menu <- as.numeric(readLines("stdin", n=1))
+if (menu == 1) {
+  print("Choose your fav Papi pizza here!")
+  print("[1] Pepperoni [2] Hawaiian [3] Chicken BBQ [4] Vegetarian [5] Seafood Deluxe")
+    pizza <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 2) {
+  print("Which chicken menu you would like to taste?")
+  print("[1] BBQ Chicken Wings [2] Korean Style Chicken Wings [3] Garlic Chicken Wings")
+  chicken <- as.numeric(readLines("stdin", n=1))
+  } else 
+if (menu == 3) {
+  print("Here are Papi yummy pasta menu!")
+  print("[1] Carbonara [2] Spicy Sauage [3] Kheemao Seafood")
+  pasta <- as.numeric(readLines("stdin", n=1))
+  } else
+if (menu == 4) {
+  print("Only organic vegetables are cooked by Papi for your well-being.")
+  print("[1] Graden Salad [2] Caesar Salad [3] Shrimp Salad")
+  salad <- as.numeric(readLines("stdin", n=1))
+  }  
+  print("Is there anything else you would like to order?")
+  print("[1] Yes [2] No")
+  add_order <- as.numeric(readLines("stdin", n=1))
+}
+
+if (add_order == 2) {
+print("Please select your payment menthod")
+print("[1]Cash [2] Credit/ Debit Card [3] Mobile Banking ")
+payment <-as.numeric(readLines("stdin", n=1))
+}
+
+if(payment == 1) {
+  print("Exact change only") 
+  print("Thank you so much.")
+  print("Your order has been processed. Please wait for 30 minutes.")
+  print("Hope you enjoy your meal!")
+} else {
+  print("Payment Successfully!") 
+  print("Thank you so much.")
+  print("Your order has been processed. Please wait for 30 minutes.")
+  print("Hope you enjoy your meal!")
+} 
+}
