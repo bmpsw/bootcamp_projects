@@ -1,0 +1,83 @@
+# Rock Paper Scissors Game
+# The end of the game, it should have a summarization of how many times users win, lose and draw
+
+# Greetings
+print("Alohaa!")
+print("---------Welcome to Rock-Paper-Scissors Game--------")
+print("Let's me introduce myself, I am Bottic.")
+
+# Get to know user
+print("What is your name?")
+user_name <- readLines("stdin",n=1)
+print(paste("Hi!",user_name, "Glad to meet you here!"))
+
+# Before starting
+print("Would you like to start game now?")
+print("[1] YES [2] NO")
+start <- as.numeric(readLines(con="stdin", n=1))
+if(start == 1) {print(paste("Cool!",user_name, "Let's get started!"))
+
+# Defining
+win_user <- 0
+win_bot <- 0
+draw <- 0
+times <- 0                
+start <- TRUE
+                 
+# Starting  
+print(paste("---Enter 'Rocks','Scissors','Paper' for playing game or enter 'Q' to end the game for sum up the score.---"))
+
+while(start == TRUE) {
+choices <- c("Rocks","Scissors","Paper")
+print(user_name)
+user_name <- readLines("stdin",n=1)
+print(paste("Bot: ", Bot <- sample(choices,size = 1)))
+players <- c(user_name, Bot)
+if(user_name == "Q"){break}
+times <- times + 1  
+  
+# Entering the worng word 
+if((sum(players %in% choices)) != 2) {print("--- INCORRECT WORD! Please try again---")
+} else
+
+# The scores are drawed
+if(user_name == Bot) {print("Draw!") 
+   draw <- draw+1
+} else
+     
+if((user_name =="Rocks" & Bot =="Scissors") ||   
+   (user_name == "Scissors" & Bot =="Paper") || 
+   (user_name =="Paper" & Bot =="Rocks"))
+   {print("You wins!")
+   win_user <- win_user + 1
+} else
+
+if((Bot =="Rocks" & user_name =="Scissors") || 
+   (Bot == "Scissors" & user_name =="Paper") ||       (Bot =="Paper" & user_name =="Rocks"))     
+   {print("Bot wins!")
+   win_bot <- win_bot + 1 
+   }
+  }
+
+# Sum up the times and scores
+print(paste("--------TOTAL SCORES!--------"))
+print(paste("Playing Times: ",times))
+print(paste("Player wins: ",win_user))
+print(paste("Bot wins: ",win_bot))
+print(paste("Draws: ", draw))
+if(times == 0) {print("N/A")} 
+else
+  
+if(times > 0)
+if((win_user+draw)>(win_bot+draw))
+{print("User wins!")}
+else
+if((win_user+draw)<(win_bot+draw))
+{print("Bot wins!")} else
+{print("Draw!")}
+
+# Finish the game  
+print(paste("-----Thank you for joining us! Hope to see you here next time <3.-----"))
+} else
+{print(paste("I hope to see you again here soon.",user_name,"Goodbyee."))} 
+  
